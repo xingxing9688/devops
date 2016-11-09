@@ -5,7 +5,7 @@
 #install 
 yum_update ()
  {
-  yum update && yum -y  install gcc*  openssl  openssl-devel prel-devel perl     wget    curl-devel curl  lrzsz  git vim -y 
+  yum update -y && yum -y  install gcc*  openssl  openssl-devel prel-devel perl     wget    curl-devel curl  lrzsz  git vim -y 
   systemctl disable firewalld
   systemctl status firewalld 
   systemctl  stop  firewalld 
