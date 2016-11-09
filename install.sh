@@ -6,7 +6,8 @@
 yum_update ()
  {
   yum update && yum -y  install gcc*  openssl  openssl-devel prel-devel perl     wget    curl-devel curl  lrzsz  git 
-  systemctl disable firewalld 
+  systemctl disable firewalld
+  systemctl status firewalld 
   systemctl  stop  firewalld 
  } 
 
@@ -25,7 +26,7 @@ docker_install()
   systemctl enable docker 
  }
 
-useradd ()
+useradd()
 {
  useradd wangxingxing && usermod -G wheel wangxingxing  
  su - wangxingxing 
@@ -33,9 +34,15 @@ useradd ()
  sudo wget https://raw.githubusercontent.com/xingxing9688/system/master/authorized_keys -P /home/wangxingxing/.ssh/
  sudo chmod 644 /home/wangxingxing/.ssh/authorized_keys 
 }
+
+
 yum_update
+
 sshd_config
+echo "sshd_config"
 #docker_install
-useradd
+useradd 
+echo "useradd"
+
 
 
