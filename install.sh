@@ -5,7 +5,7 @@
 #install 
 yum_update ()
  {
-  yum update && yum -y  install gcc*  openssl  openssl-devel prel-devel perl     wget    curl-devel curl  lrzsz  git vim 
+  yum update && yum -y  install gcc*  openssl  openssl-devel prel-devel perl     wget    curl-devel curl  lrzsz  git vim -y 
   systemctl disable firewalld
   systemctl status firewalld 
   systemctl  stop  firewalld 
@@ -38,10 +38,10 @@ useradd()
 
 hostname()
  {  
-  sed 
- 
+  echo "proapp1" > /etc/hostname 
  }
 
+#iptables -t nat -I POSTROUTING -s 192.168.8.0/24 -j SNAT --to-source 192.168.8.1  
 
 
 yum_update
