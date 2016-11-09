@@ -29,7 +29,8 @@ useradd ()
 {
  useradd wangxingxing 
  su - wangxingxing 
- mkdir .ssh && chmod 700 .ssh && wget                                        && chmod 644 authorized_keys
+ mkdir .ssh && chmod 700 .ssh && wget    https://raw.githubusercontent.com/xingxing9688/system/master/authorized_keys   
+   && chmod 644 authorized_keys
 }
 yum_update
 sshd_config
