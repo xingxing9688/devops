@@ -5,7 +5,7 @@
 #install 
 yum_update ()
  {
-  yum update && yum -y  install gcc*  openssl  openssl-devel prel-devel perl     wget    curl-devel curl  lrzsz  git 
+  yum update && yum -y  install gcc*  openssl  openssl-devel prel-devel perl     wget    curl-devel curl  lrzsz  git vim 
   systemctl disable firewalld
   systemctl status firewalld 
   systemctl  stop  firewalld 
@@ -28,12 +28,20 @@ docker_install()
 
 useradd()
 {
- useradd wangxingxing && usermod -G wheel wangxingxing  
- su - wangxingxing 
- mkdir .ssh && chmod 700 .ssh && cd .ssh
- sudo wget https://raw.githubusercontent.com/xingxing9688/system/master/authorized_keys -P /home/wangxingxing/.ssh/
- sudo chmod 644 /home/wangxingxing/.ssh/authorized_keys 
+ useradd wangxingxing && usermod -G wheel wangxingxing   
+ mkdir /home/wangxingxing/.ssh && chmod 700 /home/wangxingxing/.ssh 
+ chown  wangxingxing:wangxingxing /home/wangxingxing/.ssh 
+ wget https://raw.githubusercontent.com/xingxing9688/system/master/authorized_keys -P /home/wangxingxing/.ssh/
+ chmod 644 /home/wangxingxing/.ssh/authorized_keys 
+ chown wangxingxing:wangxingxing /home/wangxingxing/.ssh/authorized_keys
 }
+
+hostname()
+ {  
+  sed 
+ 
+ }
+
 
 
 yum_update
