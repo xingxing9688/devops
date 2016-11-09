@@ -27,10 +27,11 @@ docker_install()
 
 useradd ()
 {
- useradd wangxingxing 
+ useradd wangxingxing && usermod -G wheel wangxingxing  
  su - wangxingxing 
- mkdir .ssh && chmod 700 .ssh && wget    https://raw.githubusercontent.com/xingxing9688/system/master/authorized_keys   
-   && chmod 644 authorized_keys
+ mkdir .ssh && chmod 700 .ssh && cd .ssh
+ sudo wget https://raw.githubusercontent.com/xingxing9688/system/master/authorized_keys -P /home/wangxingxing/.ssh/
+ sudo chmod 644 /home/wangxingxing/.ssh/authorized_keys 
 }
 yum_update
 sshd_config
