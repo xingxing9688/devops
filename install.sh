@@ -25,9 +25,15 @@ docker_install()
   systemctl enable docker 
  }
 
- 
+useradd ()
+{
+ useradd wangxingxing 
+ su - wangxingxing 
+ mkdir .ssh && chmod 700 .ssh && wget                                        && chmod 644 authorized_keys
+}
 yum_update
 sshd_config
 #docker_install
+useradd
 
 
