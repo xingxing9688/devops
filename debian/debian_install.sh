@@ -10,7 +10,7 @@ deb http://ftp.cn.debian.org/debian stretch main contrib non-free
 sudo apt-get install fireware-* 
 
 
-
-
-
+install kvm 
+sudo apt-get install aptitude
+sudo aptitude  install qemu-kvm   virt-manager 
 
