@@ -23,5 +23,11 @@ make
 make install 
 
 
-＃拷贝启动脚本
+#拷贝启动脚本
+cp support-files/mysql.server  /etc/init.d/
+
+#cp 配置文件
+cp support-files/my-default.cnf /etc/my.cnf
+
+#初始化脚本
 
