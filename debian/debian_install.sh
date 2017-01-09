@@ -14,3 +14,18 @@ install kvm
 sudo apt-get install aptitude
 sudo aptitude  install qemu-kvm   virt-manager 
 
+
+
+
+#常用工具
+
+#截图工具 
+sudo apt-get install shutter 
+
+#vlc 视频播放器
+sudo apt-get install vlc 
+
+#linux ps 前端切图使用
+sudo apt-get install gimp 
+
+
