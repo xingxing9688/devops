@@ -1,3 +1,15 @@
+#按照字符集创建数据库
+create database phpmyadmin   default character set utf8 collate utf8_general_ci;
+
+#查看mysql下所有用户
+select host,user from mysql.user;
+
+
+
+
+
 ＃创建用户
 grant all on db.*  to db@"127.0.0.1" Identified by "passwd"; 
 
+授予权限
+grant select,delete,insert,update on *.*  to dev@"%" Identified by "123qweASD";
