@@ -22,12 +22,11 @@ time cmake \
 make 
 make install 
 
-
 #拷贝启动脚本
 cp support-files/mysql.server  /etc/init.d/
 
 #cp 配置文件
 cp support-files/my-default.cnf /etc/my.cnf
-
+systemctl enable mysql 
 #初始化脚本
-
+mysqld --initialize-insecure --user=mysql --user=mysql --basedir=/application/mysql --datadir=/data/mysql
