@@ -10,8 +10,12 @@ select host,user from mysql.user;
 # 删除用户 
 delete from user where user='zabbix'  and Host='localhost';
 
-＃创建用户
+#创建用户
 grant all on db.*  to db@"127.0.0.1" Identified by "passwd"; 
 
-授予权限
+#授予权限
 grant select,delete,insert,update on *.*  to dev@"%" Identified by "123qweASD";
+
+
+#修改用户密码
+set password for 'user_name'@'%'=password('password'); 
