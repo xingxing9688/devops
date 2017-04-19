@@ -16,7 +16,7 @@ sshd_config()
  {
   sed -i 's/#Port 22/Port 8022/'  /etc/ssh/sshd_config
   sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/'  /etc/ssh/sshd_config
-  #sed -i 's/PermitRootLogin yes/PermitRootLogin no/'  /etc/ssh/sshd_config
+  #sed -i 's/PermitRootLogin yes/PermitRootLogin no/'  /etc/ssh/isshd_config
  }   
 
 docker_install()
@@ -33,8 +33,8 @@ docker_install()
 
 yum_update
 
-sshd_config
-echo "sshd_config"
+#sshd_config
+#echo "sshd_config"
 
 
 
