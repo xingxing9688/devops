@@ -37,4 +37,6 @@ yum_update
 #echo "sshd_config"
 
 
+##mac office 
+#dafa3806@LD168.cc/Sosa9488
 
