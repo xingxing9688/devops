@@ -31,12 +31,22 @@ docker_install()
 #iptables -t nat -I POSTROUTING -s 192.168.8.0/24 -j SNAT --to-source 192.168.8.1  
 
 
-yum_update
 
+ansible ()
+{
+    yum install epel-release  -y
+    yum install ansible   -y 
+}
 #sshd_config
 #echo "sshd_config"
 
 
 ##mac office 
 #dafa3806@LD168.cc/Sosa9488
+
+
+yum_update 
+ansible 
+
+
 
