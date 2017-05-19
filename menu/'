@@ -1,0 +1,10 @@
+#!/bin/bash
+OPTION=$(whiptail --title "rancher " --menu "服务器列表" 30 60 18  `cat /opt/menu.sh` 3>&1 1>&2 2>&3) 
+
+exitstatus=$?
+if [ $exitstatus = 0 ]; then
+    echo "Your chosen option:" $OPTION
+else
+    echo "You chose Cancel."
+fi
+
