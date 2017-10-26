@@ -83,7 +83,7 @@
     /etc/init.d/dovecot   restart 
     
   
-  4.安装postfixadmin 和
+  4.安装postfixadmin 
   
   
   
