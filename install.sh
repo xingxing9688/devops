@@ -3,9 +3,9 @@
 #2016.11 
 
 #install 
-yum_update ()
+yum ()
  {
-  yum update -y && yum -y  install gcc*  openssl  openssl-devel prel-devel perl     wget    curl-devel curl  lrzsz  git vim -y 
+  yum -y  install gcc*  openssl  openssl-devel prel-devel perl     wget    curl-devel curl  lrzsz  git vim -y 
   systemctl disable firewalld
   systemctl status firewalld 
   systemctl  stop  firewalld 
@@ -45,8 +45,7 @@ ansible ()
 #dafa3806@LD168.cc/Sosa9488
 
 
-yum_update 
-ansible 
+yum
 
 
 
