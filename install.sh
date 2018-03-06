@@ -5,17 +5,17 @@
 #install 
 yum ()
  {
-  yum -y  install gcc*  openssl  openssl-devel prel-devel perl  net-tools  telnet  lsof    wget    curl-devel curl  lrzsz  git vim -y 
+  yum -y  install gcc*  openssl  openssl-devel prel-devel perl  net-tools  telnet  lsof    wget    curl-devel curl  lrzsz  git vim   sysstat  -y 
   systemctl disable firewalld
   systemctl status firewalld 
-  systemctl  stop  firewalld 
+  systemctl stop  firewalld 
  } 
 
 # set ssh 
 sshd_config()
  {
-  sed -i 's/#Port 22/Port 8022/'  /etc/ssh/sshd_config
-  sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/'  /etc/ssh/sshd_config
+  sed -i 's/#Port 22/Port 9120/g'  /etc/ssh/sshd_config
+  sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/g'  /etc/ssh/sshd_config
   #sed -i 's/PermitRootLogin yes/PermitRootLogin no/'  /etc/ssh/isshd_config
  }   
 
@@ -38,7 +38,7 @@ ansible ()
     yum install ansible   -y 
 }
 #sshd_config
-#echo "sshd_config"
+echo "sshd_config"
 
 
 ##mac office 
@@ -46,6 +46,7 @@ ansible ()
 
 
 yum
+
 
 
 
