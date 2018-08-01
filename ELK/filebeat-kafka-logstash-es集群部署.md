@@ -39,8 +39,14 @@
 ### 修改分片
     kafka-topics.sh --alter --zookeeper localhost:2181 --topic k8s-log --partitions 9
     
+ 
+### 查看分片 
+    kafka-topics.sh --zookeeper 10.39.15.28:2181 --list  
+       
+     
+    kafka-topics.sh --describe --zookeeper 10.39.15.28:2181 --topic  k8s-log  查看broker在做什么  
     
-
+    
     
 ### 启动kafka
     node1 启动    
